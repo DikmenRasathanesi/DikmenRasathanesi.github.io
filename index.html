@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dikmen Rasathanesi - TÜBİTAK 2204-A Projesi</title>
+    <link rel="stylesheet" href="style.css?v=1.1">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="#anasayfa" class="nav-logo">Dikmen Rasathanesi</a>
+            <div class="nav-links">
+                <a href="#proje-amaci">Proje Amacı</a>
+                <a href="#metodoloji">Yöntem</a>
+                <a href="#ana-bulgu">Ana Bulgu</a>
+                <a href="#bilgi">Tarihçe</a>
+                <a href="#galeri">Galeri</a>
+                <a href="#ekip">Ekip</a>
+                <button id="theme-toggle" class="theme-toggle-button">🌙</button>
+            </div>
+        </div>
+    </nav>
+
+    <header id="anasayfa" class="hero-section">
+        <div class="hero-content">
+            <h1>Dikmen Rasathanesi</h1>
+            <p>Antik Gökbilimin İzinde Bir TÜBİTAK 2204-A Projesi</p>
+            <a href="#proje-amaci" class="hero-button">Keşfe Başla</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="proje-amaci" class="content-block animate-on-scroll">
+            <div class="text-container">
+                <h2>Projemizin Amacı</h2>
+                <p>Bu proje, Afşin Dikmen Tepesi'nde bulunan antik yapı kalıntılarının, aslında Kış Gündönümü gibi gök olaylarını gözlemlemek için kullanılan bir 'arkeoastronomik' yapı (rasathane) olup olmadığını bilimsel yöntemlerle kanıtlamayı amaçlamaktadır.</p>
+            </div>
+            <div class="image-container">
+                <img src="yapi-resmi.jpg" alt="Antik Yapı Kalıntısı">
+            </div>
+        </section>
+
+        <section id="metodoloji" class="info-section animate-on-scroll">
+            
+            <h2>Bilimsel Yöntemimiz (Metodoloji) 🛰️</h2>
+            
+            <p style="text-align: center; font-size: 1.1em; margin-bottom: 30px;">
+                Hipotezimizi kanıtlamak için önce araziden 3 kritik veri topladık: <strong>Yapının Konumu</strong> (GPS ile 38.29°K, 36.88°D), <strong>Yapının Yönü</strong> (Pusula ile 213°) ve <strong>Yapının Tarihi</strong> (Mimari analizle M.S. 100-300).
+            </p>
+            <p style="text-align: center; font-size: 1.1em; margin-bottom: 30px;">
+                Temel sorumuz şuydu: "M.S. 100 yılında, bu konumdan bakınca, 213° yönünde hangi önemli gök olayı gerçekleşiyordu?" Bu soruyu cevaplamak için <strong>Stellarium</strong> yazılımını kullanarak en olası 4 hedefi test ettik.
+            </p>
+
+            <h3>Test 1: Ekinoks Hizalanması (Başarısız ❌)</h3>
+            <p>
+                <strong>Hipotez:</strong> Belki de yapı, Güneş'in tam Batı'dan battığı Ekinoks tarihlerini (21 Mart / 23 Eylül) işaret ediyordu.
+            </p>
+            <p>
+                <strong>Test Sonucu:</strong> Ekinokslarda Güneş tam <strong>270°</strong>'den (Batı) batar. Bizim yapımızın yönü ise <strong>213°</strong> idi. Aradaki 57°'lik devasa fark, bu hipotezin <strong>yanlış</strong> olduğunu kanıtladı. 
+            </p>
+
+            <h3>Test 2: Yaz Gündönümü Hizalanması (Başarısız ❌)</h3>
+            <p>
+                <strong>Hipotez:</strong> Belki de yapı, yılın en uzun gününü (21 Haziran) işaret ediyordu.
+            </p>
+            <p>
+                <strong>Test Sonucu:</strong> Stellarium simülasyonu, M.S. 100 yılındaki Yaz Gündönümü'nde Güneş'in yaklaşık <strong>327°</strong>'den (Kuzeybatı) battığını gösterdi. Bu yönün de bizim <strong>213°</strong>'lik (Güneybatı) ölçümümüzle hiçbir ilgisi yoktu. Bu hipotez de <strong>yanlıştı.</strong>
+            </p>
+
+            <h3>Test 3: Önemli Yıldız Hizalanmaları (Başarısız ❌)</h3>
+            <p>
+                <strong>Hipotez:</strong> Belki de hedef Güneş değil, o dönemde parlak ve önemli bir yıldızdı (örn: Sirius, Antares).
+            </p>
+            <p>
+                <strong>Test Sonucu:</strong> M.S. 100 yılı için gökyüzünü incelediğimizde, <strong>213°</strong> yönünde batan parlak veya kültürel açıdan önemli bir yıldıza rastlamadık. Bu hipotez de <strong>zayıftı.</strong>
+            </p>
+
+            <h3>Test 4: Kış Gündönümü Hizalanması (BAŞARILI ✅)</h3>
+            <p>
+                <strong>Hipotez:</strong> Geriye kalan son büyük olasılık, yılın en kısa gününü (21 Aralık) ve Güneş'in en güneyden battığı noktayı işaretlemesiydi.
+            </p>
+            <p>
+                <strong>Test Sonucu:</strong> Stellarium'a M.S. 100 yılı Kış Gündönümü tarihini girdiğimizde, Güneş'in ufukta battığı noktanın azimutunu <strong>213.5°</strong> olarak hesapladık. Bizim arazide ölçtüğümüz fiziksel yön ise <strong>213°</strong> idi.
+            </p>
+            
+            <p class="info-summary">
+                <strong>SONUÇ:</strong> Arazideki ölçümümüz (<strong>213°</strong>) ile dijital simülasyonumuz (<strong>213.5°</strong>) arasındaki <strong>0.5°</strong>'lik fark, antik mimari için hata payı (tolerans) dahilinde, istatistiksel olarak 'mükemmel' bir eşleşmedir. Diğer 3 hipotezin elenmesi, bu sonucun tesadüf olmadığını ve yapının Kış Gündönümü'nü işaretlemek için bilinçli olarak tasarlandığını kanıtlar.
+            </p>
+        </section>
+
+        <section id="ana-bulgu" class="content-block animate-on-scroll reverse">
+            <div class="image-container">
+                <img src="stellarium-kanit.jpg" alt="Stellarium 213 Derece Kanıtı">
+            </div>
+            <div class="text-container">
+                <h2>Ana Bulgu: 213° Kış Gündönümü</h2>
+                <p>Yaptığımız dört adımlı bilimsel metodoloji (saha ölçümü, tarih tespiti ve dijital simülasyon), yapının ana kapı yönünün (213°) M.S. 100 yılındaki Kış Gündönümü'nde Güneş'in battığı nokta (213.5°) ile mükemmel bir şekilde hizalandığını göstermektedir. Bu 0.5°'lik fark, bilinçli bir tasarımı kanıtlar.</p>
+            </div>
+        </section>
+        
+        <section id="bilgi" class="info-section animate-on-scroll">
+            
+            <h2>Tarihi Köken ve Turistik Önem 🏛️</h2>
+            
+            <div class="info-grid-internal">
+                <div class="info-box-internal">
+                    <h3>Geç Roma Dönemi (M.S. 3-5. Yüzyıl)</h3>
+                    <p>Yapının mimari tarzı (özellikle kemer yapısı ve taş işçiliği), buranın <strong>Geç Roma Dönemi</strong>'ne ait bir yapı olabileceğine işaret etmektedir. O dönemde bu tür stratejik tepelerin hem askeri gözetleme hem de astronomik takvim belirleme amacıyla kullanılması yaygındı.</p>
+                </div>
+                <div class="info-box-internal">
+                    <h3>Kültür Miras ve Yaygın Etki</h3>
+                    <p>Projemizin "Yaygın Etki" hedefi tam da budur. Bu yapı, koruma altına alındığı takdirde, bölge için paha biçilmez bir <strong>kültürel miras ve turizm destinasyonu</strong> olma potansiyeline sahiptir. Ziyaretçiler, binlerce yıl önce insanların gökyüzünü nasıl incelediğine burada tanıklık edebilir.</p>
+                </div>
+            </div>
+
+            <div class="location-box">
+                <h4>📍 Konum ve Harita</h4>
+                <p>Yapı, Afşin, Dikmen Tepesi'nde yer almaktadır. Aşağıdaki haritadan tam konumu inceleyebilirsiniz.</p>
+                <div class="map-container">
+    <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d15409.16751989613!2d36.806130371898355!3d38.30842498493668!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzjCsDE4JzI3LjMiTiAzNsKwNDgnNDYuNyJF!5e1!3m2!1str!2str!4v1763121556962!5m2!1str!2str" 
+        width="600" 
+        height="450" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+</div>
+
+            </div>
+        </section>
+
+        <section id="galeri" class="gallery-section animate-on-scroll">
+            <h2>Galeri ve Dijital Kanıtlar 🎥</h2>
+            <p>Proje sahamızdan videolar, fotoğraflar ve hazırladığımız 3 boyutlu model.</p>
+            
+            <div class="gallery-grid">
+                
+                <div class="gallery-item">
+                    <h3>Tavandaki Yazılar</h3>
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/RsaVWFT0Vro" title="Tavandaki Yazılar" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <h3>Defineci Çukuru</h3>
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/Jrl-a_BSJhU" title="İçerideki Çukur" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <div class="gallery-item placeholder">
+                    <h3>3D Model: Antik Yapı</h3>
+                    <p>(3D Model buraya eklenecek)</p>
+                    <span>🏛️</span>
+                </div>
+            </div>
+
+<div class="carousel-container animate-on-scroll">
+                <h3>Saha Fotoğrafları 📸</h3>
+                <div class="carousel-wrapper">
+                    <div class="carousel-track">
+                        <div class="carousel-slide"><img src="foto1.jpg" alt="Saha Fotoğrafı 1"></div>
+                        <div class="carousel-slide"><img src="foto2.jpg" alt="Saha Fotoğrafı 2"></div>
+                        <div class="carousel-slide"><img src="foto3.jpg" alt="Saha Fotoğrafı 3"></div>
+                        <div class="carousel-slide"><img src="foto4.jpg" alt="Saha Fotoğrafı 4"></div>
+                    </div>
+                </div>
+                <button class="carousel-button prev-button">❮</button>
+                <button class="carousel-button next-button">❯</button>
+            </div>
+
+        </section>
+
+        <section id="ekip" class="team-section animate-on-scroll">
+            <h2>Proje Ekibi 🧑‍🔬</h2>
+            <p>Bu projenin hayata geçmesini sağlayan ekip arkadaşlarımız:</p>
+            
+            <div class="team-grid">
+                <div class="team-member">
+                    <h4>İlyas Sefa Topal 💻</h4>
+                    <p>Dijital Modelleme ve Web Geliştirme</p>
+                </div>
+                <div class="team-member">
+                    <h4>Muhsin Alp 🗺️</h4>
+                    <p>Saha Araştırması ve Veri Toplama</p>
+                </div>
+                <div class="team-member">
+                    <h4>Ahmet Alp 🔭</h4>
+                    <p>Arkeoastronomik Ölçüm ve Analiz</p>
+                </div>
+                
+                <div class="team-member advisor">
+                    <h4>Ahmet Afyoncuoğlu 🧑‍🏫</h4>
+                    <p>Proje Danışman Öğretmeni</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Dikmen Rasathanesi Projesi</p>
+        <div class="social-links">
+            <a href="https://www.instagram.com/dikmenrasathanesi" target="_blank">Instagram Hesabımız</a>
+        </div>
+    </footer>
+
+    <script src="script.js?v=1.1"></script>
+</body>
+</html>
