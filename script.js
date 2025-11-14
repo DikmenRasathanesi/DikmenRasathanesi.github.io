@@ -87,60 +87,21 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     
-    // --- 3. RESİM RULOSU (CAROUSEL) KODU - DÜZELTİLDİ ---
-    const track = document.querySelector('.carousel-track');
-    if (!track) return; 
+    // --- 3. RESİM RULOSU (CAROUSEL) KODU - CSS SCROLL SNAP İÇİN YENİLENDİ ---
+    const wrapper = document.querySelector('.carousel-wrapper');
+    if (!wrapper) return;
 
-    const slides = Array.from(track.children);
     const nextButton = document.querySelector('.next-button');
     const prevButton = document.querySelector('.prev-button');
-    
-    // GÜVENLİ FONKSİYON: Her zaman doğru genişliği alır
-    const getSlideWidth = () => {
-        if (slides.length === 0) return 0;
-        // slides[0] o an DOM'da varsa genişliğini al
-        return slides[0] ? slides[0].getBoundingClientRect().width : 0;
-    }
 
-    let currentIndex = 0;
-    
-    // 'slideWidth' değişkenini globalde hesaplamayı kaldırdık.
-
-    nextButton.addEventListener('click', e => {
-        let slideWidth = getSlideWidth(); // Genişliği *tıklama anında* al
-        if (slides.length === 0 || slideWidth === 0) return;
-        
-        if (currentIndex === slides.length - 1) {
-            currentIndex = 0;
-        } else {
-            currentIndex++;
-        }
-        track.style.transform = 'translateX(-' + (slideWidth * currentIndex) + 'px)';
+    // Buton tıklama olayları
+    nextButton.addEventListener('click', () => {
+        const slideWidth = wrapper.clientWidth; // Kapsayıcının genişliği kadar kaydır
+        wrapper.scrollBy({ left: slideWidth, behavior: 'smooth' });
     });
 
-    prevButton.addEventListener('click', e => {
-        let slideWidth = getSlideWidth(); // Genişliği *tıklama anında* al
-        if (slides.length === 0 || slideWidth === 0) return;
-
-        if (currentIndex === 0) {
-            currentIndex = slides.length - 1;
-        } else {
-            currentIndex--;
-        }
-        track.style.transform = 'translateX(-' + (slideWidth * currentIndex) + 'px)';
-    });
-    
-    // Yeniden boyutlandırma dinleyicisi
-    window.addEventListener('resize', () => {
-        let slideWidth = getSlideWidth(); // Genişliği *yeniden boyutlandırma anında* al
-        if (slideWidth === 0) return;
-        
-        track.style.transition = 'none'; // Kaydırma animasyonunu geçici kapat
-        track.style.transform = 'translateX(-' + (slideWidth * currentIndex) + 'px)';
-        
-        // Geçişi çok kısa bir süre sonra geri ekle
-        setTimeout(() => {
-            track.style.transition = 'transform 0.5s ease-in-out';
-        }, 50);
+    prevButton.addEventListener('click', () => {
+        const slideWidth = wrapper.clientWidth;
+        wrapper.scrollBy({ left: -slideWidth, behavior: 'smooth' });
     });
 });
