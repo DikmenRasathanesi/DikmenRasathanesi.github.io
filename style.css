@@ -343,18 +343,25 @@ p {
     margin-top: 0;
 }
 .carousel-wrapper {
-    overflow: hidden;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
     position: relative;
     border-radius: 8px;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+.carousel-wrapper::-webkit-scrollbar {
+    display: none;
 }
 .carousel-track {
     display: flex;
-    transition: transform 0.5s ease-in-out;
+    /* transition kaldırıldı, doğal kaydırma kullanılacak */
 }
 .carousel-slide {
     min-width: 100%;
     box-sizing: border-box;
     flex-shrink: 0;
+    scroll-snap-align: center;
 }
 .carousel-slide img {
     width: 100%;
@@ -574,8 +581,11 @@ footer {
         grid-template-columns: 1fr;
     }
     
-    /* Carousel resim yüksekliğini mobilde azalt */
+    /* Carousel resim yüksekliğini mobilde daha esnek yap */
     .carousel-slide img {
-        height: 300px; 
+        height: auto;
+        max-height: 70vh; /* Ekran yüksekliğinin %70'ini geçmesin */
+        object-fit: cover; /* 'contain' yerine 'cover' daha iyi bir dolgu sağlayabilir */
+        padding: 1rem 0; /* Üstten ve alttan boşluk */
     }
 }
